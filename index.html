@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1 id="h1s"></h1>
+    <p id="demo">Dogs</p>
+    <p id="demo1"></p>
+    <p id="demo3"></p>
+
+    <div id="divj">michal nagosa </div>
+    <input id="Button1" type="button" value="The time is?" onclick="document.getElementById('demo1').innerHTML = Date()" />
+    <img src="kenzo.jpg" id="kenzo" style="width:50px; height:50px;" />
+    <br />
+    <input id="Button1" type="button" value="Replace dog" onclick="document.getElementById('kenzo').src = 'dog.jpg' " />
+    <input id="Button1" type="button" value="Replace to KENZO" onclick="document.getElementById('kenzo').src='kenzo.jpg'" />
+    <input id="Button1" type="button" value="click on me" onclick="document.getElementById('demo').style.fontSize = '50px'" />
+    <input id="Button1" type="button" value="visiable" onclick="visibale()" />
+    <input id="Button1" type="button" value="try it" onclick="change()" />
+
+    <script>
+        alert(1, 3)
+        console.log(5 + 6);
+
+        function visibale() {
+            if (document.getElementById('kenzo').style.display == 'none') {
+                document.getElementById('kenzo').style.display = 'block';
+            }
+            else {
+                document.getElementById('kenzo').style.display = 'none';
+            }
+        }
+        function change() {
+            document.getElementById("divj").innerHTML = "my sisko ";
+        }
+        document.write(20 + 3);
+
+        var b = "abcdefjhijklmnopqrstuvwxyz";
+        document.getElementById("demo3").innerHTML = b.length;
+           
+        var person = {
+            firstName: "Sara",
+            lastName: "The Queen",
+            age: 25,
+            fullName: function () {
+                return this.firstName + " " + this.lastName + " " + this.age;
+            }
+        };
+        document.getElementById("h1s").innerText = person.fullName();
+    </script>
+</body>
+</html>

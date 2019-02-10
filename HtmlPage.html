@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+    <body style="background-color:gray">
+        <h1>Play song.. </h1>
+        <div id="MyDiv">
+            <!--<input id="number1" type="text" />
+            <input id="number2" type="text" />
+            <input id="Button1" type="button" value="creat table" onclick="creatTable()" />-->
+
+
+            <audio id="myPlayer" controls="controls"></audio>
+
+            <select id="SelectSong" onchange="changeSong()">
+                <option>Select Song</option>
+                <option value="Ozuna - Síguelo Bailando (Video Oficial).mp3">Ozuna - Síguelo Bailando </option>
+                <option value="נאור כהן - סוודר (קאבר).mp3">(נאור כהן - סוודר (קאבר</option>
+                <option value="עדן חסון - מתפוצץ לי הראש   Eden Hason - Mitpotzetz Li Harosh.mp3">Eden Hason - Mitpotzetz Li Harosh</option>
+            </select>
+
+        </div>
+
+        <script>
+        function changeSong()
+        {
+            var SelectSong =  document.getElementById("SelectSong");
+            var myPlayer = document.getElementById("myPlayer");
+
+            myPlayer.src = SelectSong.value;
+            myPlayer.autoplay = true;
+            myPlayer.load();
+
+    }
+    </script>
+</body>
+</html>

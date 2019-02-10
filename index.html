@@ -5,50 +5,55 @@
     <title></title>
 </head>
 <body>
-    <h1 id="h1s"></h1>
-    <p id="demo">Dogs</p>
-    <p id="demo1"></p>
-    <p id="demo3"></p>
+    <div id="MyDiv">
+        <!--<input id="number1" type="text" />
+        <input id="number2" type="text" />
+        <input id="Button1" type="button" value="creat table" onclick="creatTable()" />-->
 
-    <div id="divj">michal nagosa </div>
-    <input id="Button1" type="button" value="The time is?" onclick="document.getElementById('demo1').innerHTML = Date()" />
-    <img src="kenzo.jpg" id="kenzo" style="width:50px; height:50px;" />
-    <br />
-    <input id="Button1" type="button" value="Replace dog" onclick="document.getElementById('kenzo').src = 'dog.jpg' " />
-    <input id="Button1" type="button" value="Replace to KENZO" onclick="document.getElementById('kenzo').src='kenzo.jpg'" />
-    <input id="Button1" type="button" value="click on me" onclick="document.getElementById('demo').style.fontSize = '50px'" />
-    <input id="Button1" type="button" value="visiable" onclick="visibale()" />
-    <input id="Button1" type="button" value="try it" onclick="change()" />
+
+        <audio id="myPlayer"  controls="controls" >      
+        </audio>
+
+        <select id="SelectSong" onchange="changeSong()">
+            <option>Select Song</option>
+            <option value="Ozuna - Síguelo Bailando (Video Oficial).mp3" >Ozuna - Síguelo Bailando </option>
+            <option value="נאור כהן - סוודר (קאבר).mp3">(נאור כהן - סוודר (קאבר</option>
+            <option value="עדן חסון - מתפוצץ לי הראש   Eden Hason - Mitpotzetz Li Harosh.mp3">Eden Hason - Mitpotzetz Li Harosh</option>
+        </select>
+
+    </div>
 
     <script>
-        alert(1, 3)
-        console.log(5 + 6);
+        function changeSong()
+        {
+            var SelectSong =  document.getElementById("SelectSong");
+            var myPlayer = document.getElementById("myPlayer");
+          
+            myPlayer.src = SelectSong.value;
+            myPlayer.autoplay = true;
+            myPlayer.load(); 
 
-        function visibale() {
-            if (document.getElementById('kenzo').style.display == 'none') {
-                document.getElementById('kenzo').style.display = 'block';
-            }
-            else {
-                document.getElementById('kenzo').style.display = 'none';
-            }
         }
-        function change() {
-            document.getElementById("divj").innerHTML = "my sisko ";
-        }
-        document.write(20 + 3);
+        //var MyDiv = document.getElementById("MyDiv");
+        //var s = "<table border='1'>";
+        //function creatTable()
+        //{
+        //    var number1 = document.getElementById("number1").value;
+        //    var number2 = document.getElementById("number2").value;
 
-        var b = "abcdefjhijklmnopqrstuvwxyz";
-        document.getElementById("demo3").innerHTML = b.length;
-           
-        var person = {
-            firstName: "Sara",
-            lastName: "The Queen",
-            age: 25,
-            fullName: function () {
-                return this.firstName + " " + this.lastName + " " + this.age;
-            }
-        };
-        document.getElementById("h1s").innerText = person.fullName();
+        //    for (var i = 1; i <= number1; i++)
+        //    {
+        //        s += "<tr> ";
+        //        for (var j = 1; j <= number2; j++)
+        //        {
+
+        //            s += "<td> " + (i * j) + "</td>";
+        //        }
+        //        s += "</tr>";
+        //    }
+        //    s += "</table>";
+        ////    MyDiv.innerHTML = s;
+        //}
     </script>
 </body>
 </html>
